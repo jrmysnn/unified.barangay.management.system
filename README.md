@@ -25,12 +25,17 @@ All links are relative, so the site also works from a sub-folder or opened throu
 
 ## Rebuild after changing the real site
 
-The pages are rendered from the real templates in `ubms/system/app/Views` with sample data:
+The pages are rendered from the real templates in `ubms/system/app/Views`.
+
+This copy was built from **Barangay Rosario's** public information in the live database
+(name, address, contacts, colors, seal, banner, officials, services, fees, requirements, permits,
+office hours, hotlines and resident/document counts):
 
 ```
-php tools/build-static.php
+php tools/build-static.php --barangay=1 --env=C:/wamp64/ubms/system/.env
 ```
 
-Sample data (barangay name, officials, services, figures) is at the top of `tools/build-static.php`.
+Run it again after updating Rosario in the Control Panel (e.g. adding officials). Without `--barangay`
+the script uses the generic "Barangay Sample" data at the top of `tools/build-static.php`.
 After changing CSS or JS in `ubms/assets`, copy that folder here again (`assets/`), then copy
 `tools/static-assets/demo.js` to `assets/js/demo.js`.
