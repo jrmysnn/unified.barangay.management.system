@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="base-url" content="/">
+<title>Resident Registration · Barangay Sample</title>
+<link rel="icon" href="assets/img/seal-default.svg">
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/responsive.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/buttons.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+:root{--brand:#1a5d1a;--brand-rgb:26,93,26;--brand-accent:#f2b705;--brand-accent-rgb:242,183,5;--bs-primary:#1a5d1a;--bs-primary-rgb:26,93,26;--bs-link-color:#1a5d1a;--bs-link-color-rgb:26,93,26;}
+</style>
+</head>
+<body class="layout-public d-flex flex-column min-vh-100">
+<div class="demo-ribbon text-center small py-1">Static preview of the UBMS public website – forms run in demo mode and no data is sent.</div>
+<a class="visually-hidden-focusable position-absolute p-2 bg-white" href="#main">Skip to main content</a>
+
+<div class="gov-bar py-1">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span><span class="ph-flag" aria-hidden="true"></span>Republic of the Philippines · Official website of Barangay Sample</span>
+        <span class="d-none d-md-inline">
+            <i class="fa-regular fa-clock me-1"></i>Monday to Friday, 8:00 AM – 5:00 PM             · <i class="fa-solid fa-phone ms-1 me-1"></i><a href="tel:0280000000">(02) 8000-0000</a>        </span>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-gov sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="assets/img/seal-default.svg" alt="Barangay Sample seal" width="52" height="52" class="rounded-circle">
+            <span class="lh-sm">
+                <span class="d-block brgy">Barangay Sample</span>
+                <small class="d-block">Sample City, Sample Province</small>
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="officials.html">Officials</a></li>
+                <li class="nav-item"><a class="nav-link" href="verify.html">Verify Document</a></li>
+                                    <li class="nav-item ms-lg-2"><a class="btn btn-outline-primary" href="login.html"><i class="fa-solid fa-right-to-bracket me-1"></i>Sign in</a></li>
+                    <li class="nav-item ms-lg-1 mt-2 mt-lg-0"><a class="btn btn-primary" href="register.html"><i class="fa-solid fa-user-plus me-1"></i>Register</a></li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+
+<main id="main" class="flex-grow-1">
+                    <div class="container py-4">
+                        <div class="row justify-content-center">
+<div class="col-lg-9 col-xl-8">
+    <div class="text-center mb-4">
+        <h1 class="h3 fw-bold mb-1">Register as a Resident</h1>
+        <p class="text-body-secondary mb-0">It takes about 5 minutes. You only need to do this once.</p>
+    </div>
+
+    <form method="post" action="register.html" enctype="multipart/form-data" data-wizard novalidate>
+                <ol class="wizard-steps">
+            <li>About you</li>
+            <li>Address</li>
+            <li>Household</li>
+            <li>Documents</li>
+            <li>Account</li>
+        </ol>
+
+        <div class="card shadow-sm"><div class="card-body p-4">
+
+        <!-- STEP 1 -->
+        <div class="wizard-pane">
+            <h2 class="h5 fw-bold mb-1">Tell us about yourself</h2>
+            <p class="small text-body-secondary mb-3">Write your name exactly as it appears on your valid ID.</p>
+            <div class="row g-3">
+                <div class="col-md-6"><label class="form-label required" for="first_name">First name</label><input class="form-control form-control-lg" id="first_name" name="first_name" value="" placeholder="Juan" required></div>
+                <div class="col-md-6"><label class="form-label" for="middle_name">Middle name <small class="text-body-secondary">(optional)</small></label><input class="form-control form-control-lg" id="middle_name" name="middle_name" value="" placeholder="Santos"></div>
+                <div class="col-md-8"><label class="form-label required" for="last_name">Last name / Surname</label><input class="form-control form-control-lg" id="last_name" name="last_name" value="" placeholder="Dela Cruz" required></div>
+                <div class="col-md-4"><label class="form-label" for="suffix">Suffix <small class="text-body-secondary">(Jr., III)</small></label><input class="form-control form-control-lg" id="suffix" name="suffix" value=""></div>
+                <div class="col-12">
+                    <label class="form-label required d-block">Sex</label>
+                    <div class="row g-2">
+                        <div class="col-6"><input type="radio" class="btn-check" name="sex" id="sex_m" value="male" required><label class="big-choice text-center" for="sex_m"><i class="fa-solid fa-mars d-block mb-1"></i><span data-label>Male</span></label></div>
+                        <div class="col-6"><input type="radio" class="btn-check" name="sex" id="sex_f" value="female"><label class="big-choice text-center" for="sex_f"><i class="fa-solid fa-venus d-block mb-1"></i><span data-label>Female</span></label></div>
+                    </div>
+                                    </div>
+                <div class="col-md-6"><label class="form-label required" for="birthdate">Date of birth</label><input type="date" class="form-control form-control-lg" id="birthdate" name="birthdate" value="" max="2026-11-21" required></div>
+                <div class="col-md-6"><label class="form-label required" for="birthplace">Place of birth</label><input class="form-control form-control-lg" id="birthplace" name="birthplace" value="" placeholder="City / municipality" required></div>
+                <div class="col-md-6"><label class="form-label required" for="civil_status">Civil status</label><select class="form-select form-select-lg" id="civil_status" name="civil_status" required><option value="single" selected>Single</option><option value="married">Married</option><option value="widowed">Widowed</option><option value="separated">Separated</option><option value="annulled">Annulled</option></select></div>
+                <div class="col-md-6"><label class="form-label" for="occupation">Work / occupation <small class="text-body-secondary">(optional)</small></label><input class="form-control form-control-lg" id="occupation" name="occupation" value="" placeholder="e.g. Vendor, Student, None"></div>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="wizard-pane">
+            <h2 class="h5 fw-bold mb-1">Where do you live, and how can we reach you?</h2>
+            <p class="small text-body-secondary mb-3">We will send updates about your requests here.</p>
+            <div class="row g-3">
+                <div class="col-md-6"><label class="form-label required" for="mobile">Mobile number</label>
+                    <div class="input-group input-group-lg"><span class="input-group-text"><i class="fa-solid fa-mobile-screen"></i></span><input class="form-control" id="mobile" name="mobile" value="" placeholder="09XXXXXXXXX" inputmode="tel" pattern="(09|\+639)\d{9}" required></div>
+                    <div class="form-text">11 digits, starting with 09.</div></div>
+                <div class="col-md-6"><label class="form-label required" for="email">Email address</label>
+                    <div class="input-group input-group-lg"><span class="input-group-text"><i class="fa-solid fa-envelope"></i></span><input type="email" class="form-control" id="email" name="email" value="" placeholder="juan@email.com" required></div>
+                    <div class="form-text">Your verification code will be sent here.</div></div>
+                <div class="col-md-5"><label class="form-label required" for="purok_id">Purok / Zone</label><select class="form-select form-select-lg" id="purok_id" name="purok_id" required><option value="">— Choose —</option><option value="1">Purok 1</option><option value="2">Purok 2</option><option value="3">Purok 3</option><option value="4">Purok 4</option><option value="5">Purok 5</option><option value="6">Purok 6</option><option value="7">Purok 7</option></select></div>
+                <div class="col-md-7"><label class="form-label required" for="address_line">House no. and street</label><input class="form-control form-control-lg" id="address_line" name="address_line" value="" placeholder="e.g. 12 Rizal St." required></div>
+                <div class="col-md-6"><label class="form-label" for="residency_since">Living here since <small class="text-body-secondary">(optional)</small></label><input type="date" class="form-control form-control-lg" id="residency_since" name="residency_since" value="" max="2026-11-21"><div class="form-text">An approximate date is fine.</div></div>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="wizard-pane">
+            <h2 class="h5 fw-bold mb-1">Your household</h2>
+            <p class="small text-body-secondary mb-3">A household is everyone who lives and eats together in one home.</p>
+            <div class="row g-2 mb-3">
+                <div class="col-md-6"><input type="radio" class="btn-check" name="is_head" id="head_yes" value="1" checked><label class="big-choice" for="head_yes"><i class="fa-solid fa-house-user me-2"></i><strong data-label>I am the head of the household</strong><br><small class="text-body-secondary">You can list the people living with you.</small></label></div>
+                <div class="col-md-6"><input type="radio" class="btn-check" name="is_head" id="head_no" value="0"><label class="big-choice" for="head_no"><i class="fa-solid fa-people-roof me-2"></i><strong data-label>Someone else is the head</strong><br><small class="text-body-secondary">e.g. your parent or spouse.</small></label></div>
+            </div>
+            <div data-show-when="is_head=0">
+                <label class="form-label" for="household_head_name">Name of the household head</label>
+                <input class="form-control form-control-lg" id="household_head_name" name="household_head_name" value="" placeholder="Full name">
+            </div>
+            <div data-show-when="is_head=1">
+                <div id="members" data-repeater>
+                    <label class="form-label">People living with you <small class="text-body-secondary">(optional – you can skip this)</small></label>
+                    <div data-repeater-list></div>
+                    <template>
+                        <div class="border rounded-3 p-2 mb-2 bg-body-tertiary" data-repeater-item>
+                            <div class="row g-2 align-items-end">
+                                <div class="col-md-4"><label class="form-label small mb-0">First name</label><input class="form-control" name="members[__INDEX__][first_name]"></div>
+                                <div class="col-md-4"><label class="form-label small mb-0">Last name</label><input class="form-control" name="members[__INDEX__][last_name]"></div>
+                                <div class="col-md-4"><label class="form-label small mb-0">Birthdate</label><input type="date" class="form-control" name="members[__INDEX__][birthdate]"></div>
+                                <div class="col-md-4"><label class="form-label small mb-0">Sex</label><select class="form-select" name="members[__INDEX__][sex]"><option value="male">Male</option><option value="female">Female</option></select></div>
+                                <div class="col-md-5"><label class="form-label small mb-0">Relationship to you</label><select class="form-select" name="members[__INDEX__][relationship]"><option value="Spouse">Spouse</option><option value="Son">Son</option><option value="Daughter">Daughter</option><option value="Father">Father</option><option value="Mother">Mother</option><option value="Brother">Brother</option><option value="Sister">Sister</option><option value="Grandchild">Grandchild</option><option value="Grandparent">Grandparent</option><option value="In-law">In-law</option><option value="Relative">Relative</option><option value="Boarder">Boarder</option><option value="Helper">Helper</option><option value="Other">Other</option></select></div>
+                                <div class="col-md-3"><button type="button" class="btn btn-outline-danger w-100" data-repeater-remove><i class="fa-solid fa-trash me-1"></i>Remove</button></div>
+                            </div>
+                        </div>
+                    </template>
+                    <button type="button" class="btn btn-outline-primary" data-repeater-add="#members"><i class="fa-solid fa-user-plus me-1"></i>Add a household member</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="wizard-pane">
+            <h2 class="h5 fw-bold mb-1">Upload your documents</h2>
+            <p class="small text-body-secondary mb-3">Take a clear photo with your phone. Make sure all text is readable and nothing is cut off.</p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label required">Proof that you live here</label>
+                    <div class="upload-drop">
+                        <i class="fa-solid fa-id-card fa-2x text-brand mb-2"></i>
+                        <p class="small mb-2">A valid ID showing your address, a utility bill (electric / water), or a lease contract.</p>
+                        <input type="file" class="form-control" name="proof" accept="image/*,application/pdf" data-preview="#proofPreview" required>
+                        <img id="proofPreview" class="preview mx-auto" alt="">
+                                            </div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Your photo <small class="text-body-secondary">(optional)</small></label>
+                    <div class="upload-drop">
+                        <i class="fa-solid fa-camera fa-2x text-brand mb-2"></i>
+                        <p class="small mb-2">A clear photo of your face, plain background. Used for your Barangay ID.</p>
+                        <input type="file" class="form-control" name="photo" accept="image/*" capture="user" data-preview="#photoPreview">
+                        <img id="photoPreview" class="preview mx-auto" alt="">
+                    </div>
+                </div>
+                <div class="col-12"><div class="tip"><i class="fa-solid fa-lock me-1"></i>Your documents are stored privately and seen only by authorized barangay staff.</div></div>
+            </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="wizard-pane">
+            <h2 class="h5 fw-bold mb-1">Create your account</h2>
+            <p class="small text-body-secondary mb-3">You will use this to sign in and check your requests.</p>
+            <div class="row g-3">
+                <div class="col-md-12"><label class="form-label required" for="username">Username</label><input class="form-control form-control-lg" id="username" name="username" value="" autocomplete="username" pattern="[A-Za-z0-9_.\-]{4,60}" placeholder="e.g. juandelacruz" required><div class="form-text">At least 4 letters or numbers, no spaces.</div></div>
+                <div class="col-md-6"><label class="form-label required" for="password">Password</label>
+                    <div class="input-group input-group-lg"><input type="password" class="form-control" id="password" name="password" autocomplete="new-password" minlength="10" required><button class="btn btn-outline-secondary" type="button" data-toggle-password="#password" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div>
+                    <div class="form-text">At least 10 characters, with letters and numbers.</div></div>
+                <div class="col-md-6"><label class="form-label required" for="password_confirmation">Type the password again</label>
+                    <div class="input-group input-group-lg"><input type="password" class="form-control" id="password_confirmation" name="password_confirmation" autocomplete="new-password" minlength="10" required><button class="btn btn-outline-secondary" type="button" data-toggle-password="#password_confirmation" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div></div>
+
+                <div class="col-12">
+                    <div class="border rounded-3 p-3 bg-body-tertiary">
+                        <div class="fw-bold mb-2"><i class="fa-solid fa-list-check text-brand me-1"></i>Please check your details</div>
+                        <div class="row small g-1">
+                            <div class="col-sm-4 text-body-secondary">Name</div><div class="col-sm-8"><span data-review-for="first_name"></span> <span data-review-for="last_name"></span></div>
+                            <div class="col-sm-4 text-body-secondary">Birthdate</div><div class="col-sm-8" data-review-for="birthdate"></div>
+                            <div class="col-sm-4 text-body-secondary">Mobile</div><div class="col-sm-8" data-review-for="mobile"></div>
+                            <div class="col-sm-4 text-body-secondary">Email</div><div class="col-sm-8" data-review-for="email"></div>
+                            <div class="col-sm-4 text-body-secondary">Purok</div><div class="col-sm-8" data-review-for="purok_id"></div>
+                            <div class="col-sm-4 text-body-secondary">Address</div><div class="col-sm-8" data-review-for="address_line"></div>
+                            <div class="col-sm-4 text-body-secondary">Proof of residency</div><div class="col-sm-8" data-review-for="proof"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check p-3 border rounded-3">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="consent" value="1" id="consent" required>
+                        <label class="form-check-label" for="consent">I have read the <a href="privacy.html" target="_blank">Privacy Notice</a>. I agree that Barangay Sample may collect and use my information for barangay services, as allowed by the Data Privacy Act of 2012.</label>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="card-footer bg-transparent d-flex justify-content-between p-3">
+            <button type="button" class="btn btn-outline-secondary btn-lg" data-wizard-prev><i class="fa-solid fa-arrow-left me-1"></i>Back</button>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg wizard-next-btn" data-wizard-next>Next<i class="fa-solid fa-arrow-right ms-1"></i></button>
+                <button class="btn btn-accent btn-lg wizard-submit-btn"><i class="fa-solid fa-paper-plane me-1"></i>Submit registration</button>
+            </div>
+        </div>
+        </div>
+    </form>
+    <p class="text-center small mt-3">Already registered? <a href="login.html">Sign in</a> · Need help? Visit the barangay hall during office hours.</p>
+</div>
+</div>
+        </div>
+    </main>
+
+<footer class="footer-gov pt-5 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/img/seal-default.svg" alt="" width="48" height="48" class="rounded-circle bg-white p-1">
+                    <div class="lh-sm"><strong class="text-white">Barangay Sample</strong><br><small>Sample City, Sample Province</small></div>
+                </div>
+                <p class="small mb-2"><i class="fa-solid fa-location-dot me-2"></i>Barangay Hall, Main Street, Sample City</p>
+                <p class="small mb-2"><i class="fa-solid fa-phone me-2"></i>(02) 8000-0000</p>                <p class="small mb-2"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:barangay@example.com">barangay@example.com</a></p>                <p class="small mb-0"><i class="fa-regular fa-clock me-2"></i>Monday to Friday, 8:00 AM – 5:00 PM</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Online services</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="register.html">Barangay Clearance</a></li>
+                    <li class="mb-2"><a href="register.html">Certificate of Indigency</a></li>
+                    <li class="mb-2"><a href="register.html">Certificate of Residency</a></li>
+                    <li class="mb-2"><a href="register.html">Barangay ID</a></li>
+                    <li class="mb-2"><a href="register.html">Permits</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Quick links</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="register.html">Register as resident</a></li>
+                    <li class="mb-2"><a href="login.html">Track my application</a></li>
+                    <li class="mb-2"><a href="verify.html">Verify a document</a></li>
+                    <li class="mb-2"><a href="login.html">Report an incident</a></li>
+                    <li class="mb-2"><a href="services.html">Citizen's Charter</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6>Emergency hotlines</h6>
+                <ul class="list-unstyled small">
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>National Emergency Hotline</span><a href="tel:911"><strong>911</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Barangay Hall</span><a href="tel:0280000000"><strong>(02) 8000-0000</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Police Station</span><a href="tel:09170000001"><strong>0917 000 0001</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Fire Station</span><a href="tel:09170000002"><strong>0917 000 0002</strong></a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 py-3 mt-4">
+            <span>&copy; 2026 Barangay Sample. All rights reserved.</span>
+            <span><a href="privacy.html">Privacy Notice</a> · Data Privacy Act of 2012 (RA 10173) · Ease of Doing Business Act (RA 11032)</span>
+        </div>
+    </div>
+</footer>
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.bootstrap5.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.responsive.min.js"></script>
+<script src="assets/vendor/datatables/js/responsive.bootstrap5.min.js"></script>
+<script src="assets/vendor/jszip/jszip.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.buttons.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.bootstrap5.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.html5.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.print.min.js"></script>
+<script src="assets/vendor/qrcode/qrcode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>

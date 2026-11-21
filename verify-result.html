@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="base-url" content="/">
+<title>Document Verification · Barangay Sample</title>
+<link rel="icon" href="assets/img/seal-default.svg">
+<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/responsive.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/vendor/datatables/css/buttons.bootstrap5.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+:root{--brand:#1a5d1a;--brand-rgb:26,93,26;--brand-accent:#f2b705;--brand-accent-rgb:242,183,5;--bs-primary:#1a5d1a;--bs-primary-rgb:26,93,26;--bs-link-color:#1a5d1a;--bs-link-color-rgb:26,93,26;}
+</style>
+</head>
+<body class="layout-public d-flex flex-column min-vh-100">
+<div class="demo-ribbon text-center small py-1">Static preview of the UBMS public website – forms run in demo mode and no data is sent.</div>
+<a class="visually-hidden-focusable position-absolute p-2 bg-white" href="#main">Skip to main content</a>
+
+<div class="gov-bar py-1">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+        <span><span class="ph-flag" aria-hidden="true"></span>Republic of the Philippines · Official website of Barangay Sample</span>
+        <span class="d-none d-md-inline">
+            <i class="fa-regular fa-clock me-1"></i>Monday to Friday, 8:00 AM – 5:00 PM             · <i class="fa-solid fa-phone ms-1 me-1"></i><a href="tel:0280000000">(02) 8000-0000</a>        </span>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-gov sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="assets/img/seal-default.svg" alt="Barangay Sample seal" width="52" height="52" class="rounded-circle">
+            <span class="lh-sm">
+                <span class="d-block brgy">Barangay Sample</span>
+                <small class="d-block">Sample City, Sample Province</small>
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="officials.html">Officials</a></li>
+                <li class="nav-item"><a class="nav-link active" href="verify.html">Verify Document</a></li>
+                                    <li class="nav-item ms-lg-2"><a class="btn btn-outline-primary" href="login.html"><i class="fa-solid fa-right-to-bracket me-1"></i>Sign in</a></li>
+                    <li class="nav-item ms-lg-1 mt-2 mt-lg-0"><a class="btn btn-primary" href="register.html"><i class="fa-solid fa-user-plus me-1"></i>Register</a></li>
+                            </ul>
+        </div>
+    </div>
+</nav>
+
+<main id="main" class="flex-grow-1">
+                    <div class="container py-4">
+                        <div class="verify-result">
+    <h1 class="h3 fw-bold mb-3 text-center"><i class="fa-solid fa-qrcode me-2 text-brand"></i>Document Verification</h1>
+
+                    <div class="card border-success border-2 mb-4">
+            <div class="card-header text-bg-success text-center py-3">
+                                    <i class="fa-solid fa-circle-check fa-2x mb-2 d-block"></i><span class="h5">GENUINE &amp; VALID DOCUMENT</span>
+                            </div>
+            <div class="card-body">
+                <dl class="dl-grid">
+                    <dt>Document</dt><dd>Barangay Clearance</dd>
+                    <dt>Control No.</dt><dd><strong>CLR-2026-000123</strong></dd>
+                    <dt>Issued to</dt><dd>J*** S***** D*** C***</dd>                                                            <dt>Date issued</dt><dd>November 18, 2026</dd>
+                    <dt>Valid until</dt><dd>May 17, 2027</dd>
+                    <dt>Signed by</dt><dd>HON. JUAN D. DELA CRUZ</dd>
+                    <dt>Issued by</dt><dd>Barangay Sample, Sample City</dd>
+                                    </dl>
+                <p class="small text-body-secondary mt-3 mb-0">Compare these details with the printed document. Names are partially hidden for privacy. If anything does not match, contact the barangay office.</p>
+            </div>
+        </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <p class="mb-2">Scan the QR code on any barangay-issued document with your phone camera, or enter the control number printed on it.</p>
+            <form method="post" action="verify.html" class="row g-2">
+                                <div class="col-sm-8"><input class="form-control" name="control_no" placeholder="Control No. e.g. CLR-2026-000123" required></div>
+                <div class="col-sm-4 d-grid"><button class="btn btn-primary"><i class="fa-solid fa-magnifying-glass me-1"></i>Verify</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+        </div>
+    </main>
+
+<footer class="footer-gov pt-5 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <img src="assets/img/seal-default.svg" alt="" width="48" height="48" class="rounded-circle bg-white p-1">
+                    <div class="lh-sm"><strong class="text-white">Barangay Sample</strong><br><small>Sample City, Sample Province</small></div>
+                </div>
+                <p class="small mb-2"><i class="fa-solid fa-location-dot me-2"></i>Barangay Hall, Main Street, Sample City</p>
+                <p class="small mb-2"><i class="fa-solid fa-phone me-2"></i>(02) 8000-0000</p>                <p class="small mb-2"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:barangay@example.com">barangay@example.com</a></p>                <p class="small mb-0"><i class="fa-regular fa-clock me-2"></i>Monday to Friday, 8:00 AM – 5:00 PM</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Online services</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="register.html">Barangay Clearance</a></li>
+                    <li class="mb-2"><a href="register.html">Certificate of Indigency</a></li>
+                    <li class="mb-2"><a href="register.html">Certificate of Residency</a></li>
+                    <li class="mb-2"><a href="register.html">Barangay ID</a></li>
+                    <li class="mb-2"><a href="register.html">Permits</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Quick links</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="register.html">Register as resident</a></li>
+                    <li class="mb-2"><a href="login.html">Track my application</a></li>
+                    <li class="mb-2"><a href="verify.html">Verify a document</a></li>
+                    <li class="mb-2"><a href="login.html">Report an incident</a></li>
+                    <li class="mb-2"><a href="services.html">Citizen's Charter</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6>Emergency hotlines</h6>
+                <ul class="list-unstyled small">
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>National Emergency Hotline</span><a href="tel:911"><strong>911</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Barangay Hall</span><a href="tel:0280000000"><strong>(02) 8000-0000</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Police Station</span><a href="tel:09170000001"><strong>0917 000 0001</strong></a></li>
+                                            <li class="mb-2 d-flex justify-content-between border-bottom border-white border-opacity-10 pb-2"><span><i class="fa-solid fa-phone-volume me-2 text-danger"></i>Fire Station</span><a href="tel:09170000002"><strong>0917 000 0002</strong></a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 py-3 mt-4">
+            <span>&copy; 2026 Barangay Sample. All rights reserved.</span>
+            <span><a href="privacy.html">Privacy Notice</a> · Data Privacy Act of 2012 (RA 10173) · Ease of Doing Business Act (RA 11032)</span>
+        </div>
+    </div>
+</footer>
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.bootstrap5.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.responsive.min.js"></script>
+<script src="assets/vendor/datatables/js/responsive.bootstrap5.min.js"></script>
+<script src="assets/vendor/jszip/jszip.min.js"></script>
+<script src="assets/vendor/datatables/js/dataTables.buttons.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.bootstrap5.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.html5.min.js"></script>
+<script src="assets/vendor/datatables/js/buttons.print.min.js"></script>
+<script src="assets/vendor/qrcode/qrcode.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
